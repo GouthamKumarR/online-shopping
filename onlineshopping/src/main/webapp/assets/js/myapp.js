@@ -11,9 +11,20 @@ $(function(){
 			$('#contact').addClass('active');
 			$('#home').removeClass('active');
 			break;
+			
+		case 'All Products':
+			$('#listProducts').addClass('active');
+			$('#home').removeClass('active');
+			break;
+			
+		case 'Home':
+			$('#home').addClass('active');
+			break;
 		
 		default:
-				$('#home').addClass('active');
+				$('#listProducts').addClass('active');
+				$('#a_'+menu).addClass('active');
+				$('#home').removeClass('active');
 				break;
 		
 	

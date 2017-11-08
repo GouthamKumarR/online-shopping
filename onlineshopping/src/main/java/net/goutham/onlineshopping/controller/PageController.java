@@ -1,16 +1,26 @@
 package net.goutham.onlineshopping.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import net.goutham.shoppingbackend.dao.CategoryDao;
+import net.goutham.shoppingbackend.dto.Category;
+
 @Controller
 public class PageController {
+	
+	@Autowired
+	private CategoryDao categoryDao;
 	
 	@RequestMapping(value= {"/" , "/index" , "/home"})
 	public ModelAndView index(){
 		ModelAndView mv = new ModelAndView("page");
 		/*mv.addObject("greeting", "Welcome to spring web mvc");*/
+		mv.addObject("categories",categoryDao.list());
+		
 		mv.addObject("title", "Home");
 		mv.addObject("userClickHome", true);
 		return mv;
@@ -38,7 +48,33 @@ public class PageController {
 		
 	}
 	
+	@RequestMapping(value= {"show/all/products"})
+	public ModelAndView showAllProducts(){
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("categories",categoryDao.list());
+		
+		mv.addObject("title", "All Products");
+		mv.addObject("userClickAllProducts", true);
+		return mv;
+		
+	}
 	
+	@RequestMapping(value= {"show/category/{id}/products"})
+	public ModelAndView showCategoryProducts(@PathVariable("id")int id){
+		ModelAndView mv = new ModelAndView("page");
+		Category category = null;
+		
+		category = categoryDao.get(id);
+		
+		mv.addObject("title", category.getName());
+		
+		mv.addObject("categories",categoryDao.list());
+		
+		mv.addObject("category",category);
+		mv.addObject("userClickCategoryProducts", true);
+		return mv;
+		
+	}
 	
 	
 	

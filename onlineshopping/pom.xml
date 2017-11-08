@@ -13,6 +13,12 @@
 	</properties>
 
 	<dependencies>
+	<!-- Linking Backend Project with Front end -->
+	<dependency>
+		<groupId>net.goutham</groupId>
+		<artifactId>shoppingbackend</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
 		<!-- Java EE APi -->
 		<dependency>
 			<groupId>javax</groupId>
