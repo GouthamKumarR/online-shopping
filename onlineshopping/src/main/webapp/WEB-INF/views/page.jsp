@@ -7,6 +7,15 @@
      <spring:url var="css" value="/resources/css"></spring:url>
      <spring:url var="js" value="/resources/js"></spring:url>
      <spring:url var="images" value="/resources/images"></spring:url>
+     
+<!--      
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4-4.0.0-beta/jqc-1.12.3/dt-1.10.16/datatables.min.css"/>
+    
+   
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.0.0-beta/jqc-1.12.3/dt-1.10.16/datatables.min.js"></script>
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/esm/popper.js"></script> -->
+
     
     <c:set var="contextRoot" value="${pageContext.request.contextPath }"></c:set>
 <!DOCTYPE html>
@@ -21,14 +30,16 @@
 
     <title>Online Shopping - ${title} </title>
     
+  
+  
+    
     <script>
     
     window.menu = '${title}';
     
-    
     </script>
-
-    <!-- Bootstrap core CSS -->
+   
+ <!-- Bootstrap core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -36,6 +47,13 @@
     
     <!-- Custom styles theme -->
     <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+
+
+	<!-- Bootstrap DataTables -->
+
+
+   
+
 
   </head>
 
@@ -78,17 +96,26 @@
     <!-- Footer -->
    <%@include file="./shared/footer.jsp" %>
    
+   <script src="${js}/bootstrap.min.js"></script>
+    
    
-   
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="${js}/jquery.min.js"></script>
-    <script src="${js}/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="${js}/jquery.min.js"></script>
+     
     
     <!-- My own Script -->
     
+ 	
+    <script src="${js}/data.js"></script>
+    <script src="${js}/dataTable.js"></script>
+    
     <script src="${js}/myapp.js"></script>
+    
+ 
+ 
+ 
 
+ 
 
 </div>
   </body>

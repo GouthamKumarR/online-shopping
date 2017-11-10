@@ -40,8 +40,58 @@
 		 
 		 </div>
 	
+	
+	<div clss="row">
+		
+		<div class="col-xs-12">
+		
+		
+			<table id="productListTable" class="table table-striped table-borderd">
+			
+		<!-- 	<table id="example" class="display" cellspacing="0" width="100%" style="overflow-x:auto"> -->
+ 
+ 
+ 
+<thead>
+ 
+ 
+ 
+<tr>
+ 
+ 
+ 
+<th>Name</th>
+ 
+ 
+ 
+ 
+ 
+ 
+<th>Desgination</th>
+ 
+ 
+ 
+
+ 
+ 
+</tr>
+ 
+ 
+ 
+</thead>
+ 
+ 
+
+				
+			
+			
+			</table>
+			
+		</div>
+	</div>
 		</div>
 	</div>
 
 
 </div>
+

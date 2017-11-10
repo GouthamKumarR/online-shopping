@@ -24,7 +24,7 @@ public class PageController {
 		mv.addObject("title", "Home");
 		mv.addObject("userClickHome", true);
 		return mv;
-		
+		 
 	}
 	
 	@RequestMapping(value= {"/about"})
