@@ -30,6 +30,7 @@ public class JsonDataController {
 	@ResponseBody
 	public List<Product> getProductsByCategory(@PathVariable int id){
 		
+		
 		return productDao.listActiveProductsByCategory(id);
 		
 	}
